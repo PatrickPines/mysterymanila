@@ -1,7 +1,3 @@
-
-<<<<<<< HEAD
-//hello
-=======
 $_SESSION['userID'] = null; 
 $_SESSSION['userTypeID'] = null;
 $_SESSION['username'] = null;
