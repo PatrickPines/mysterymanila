@@ -95,6 +95,28 @@ if($_SESSION['userTypeID'] != 1) {
                                     <a href="displayuser.php">Display Users</a>
                                 </li>
                             </ul>
+							 <li>
+                            <a href="#"><i class="fa fa-sitemap fa-fw"></i> Branches<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+							<?php 
+								require_once('mysteryDB_connect.php');
+
+
+						$sql = "SELECT *
+							  from branches where status = 0";
+						
+							$result = mysqli_query($dbc,$sql);
+						while($row=mysqli_fetch_array($result,MYSQLI_ASSOC)) {
+							$branchID = $row['branchID'];
+							$branchname = $row['branchname'];	
+							echo "
+								<li>
+									<a href='roomslist.php?branchID='.$branchID.'&branchname='.$branchname.'>$branchname </a>
+                                </li>";
+						}
+								?>
+							
+                            </ul>
 							<li>
                             <a href="#"><i class="fa fa-sitemap fa-fw"></i> Manage Data<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
