@@ -1,7 +1,6 @@
-
-<<<<<<< HEAD
-//hello
-=======
+<!DOCTYPE html>
+<html lang="en">
+<?php session_start();
 $_SESSION['userID'] = null; 
 $_SESSSION['userTypeID'] = null;
 $_SESSION['username'] = null;
